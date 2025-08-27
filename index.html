@@ -21,7 +21,7 @@
         <div class="nav-right flex gap-4 ">
            <button class="flex justify-center items-center gap-2 w-[90px] h-10  rounded-xl bg-[#41ff6b1a]">
             <div class="btn-left">
-                <p>0</p>
+                <p id="current-heart">0</p>
             </div>
             <div class="btn-right">
                 <figure><img class="h-6" src="./assets/heart.png" alt=""></figure>
@@ -29,7 +29,7 @@
            </button>
            <button class="flex justify-center items-center gap-2 w-[90px] h-10  rounded-xl bg-[#41ff6b1a]">
             <div class="btn-left">
-                <p>100</p>
+                <p id="current-coin">100</p>
             </div>
             <div class="btn-right">
                 <figure><img class="h-6" src="./assets/coin.png" alt=""></figure>
@@ -59,7 +59,7 @@
             <div class="card w-80 h-72  p-5 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/emergency.png" alt=""></figure>
-                <i class="fa-regular fa-heart" style="color: #000000;"></i>
+                <i id="click-heart" class="fa-regular fa-heart" style="color: #000000;"></i>
 
             </div>
             <div class="mt-2">
@@ -74,7 +74,7 @@
                     <i class="fa-regular fa-copy" style="color: #908e8e;"></i>
                     <p class="text-[#908e8e]">Copy</p>
                    </button>
-                   <button class="w-1/2 h-8 rounded-sm flex justify-center items-center gap-1 text-white bg-[#00a63e]">
+                   <button id="call-btn" class="w-1/2 h-8 rounded-sm flex justify-center items-center gap-1 text-white bg-[#00a63e]">
                         <i class="fa-solid fa-phone"></i>
                         <p class="text-white">Call</p>
                    </button>
@@ -309,5 +309,6 @@
            </div>
        </aside>
      </div>
+     <script src="./script.js"></script>
 </body>
 </html>
