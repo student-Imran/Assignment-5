@@ -1,4 +1,4 @@
-// DOM of History and COIN
+// DOM of History and Coin
 
 const callButtons = document.querySelectorAll("#call-btn")
 
@@ -31,14 +31,16 @@ callButtons.forEach((btn)=>{
 
 /* DOM of Heart */
 
+const hearts = document.querySelectorAll(".fa-heart")
+
+hearts.forEach((heart)=>{
+  heart.addEventListener("click",function(){
+    const currentHeart = document.getElementById("current-heart")
+    currentHeart.innerText = parseInt(currentHeart.innerText) + 1;
+  })
+})
 
 
-// document.getElementById("click-heart").addEventListener("click",function(){
-//     const currentHeart = document.getElementById("current-heart")
-//     currentHeart.innerText = parseInt(currentHeart.innerText) + 1;
-   
-    
-// })
 
 
 
