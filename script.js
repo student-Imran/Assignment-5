@@ -1,3 +1,5 @@
+
+
 // DOM of History and Coin
 
 const callButtons = document.querySelectorAll("#call-btn");
@@ -17,7 +19,7 @@ copyButtons.forEach((copyBtn)=>{
      const copyText = organizationNumber.innerText;
      navigator.clipboard.writeText(copyText);
      
-     
+     document.getElementById("effect").style.display = 'block';
      const divAlert = document.createElement("div");
      divAlert.innerHTML = `
       <div class="div-1">
@@ -45,6 +47,7 @@ copyButtons.forEach((copyBtn)=>{
      const alertOkBtn = document.getElementById("alertOK-btn");
      
      alertOkBtn.addEventListener("click",function(){
+      document.getElementById("effect").style.display = 'none';
       customAlert.textContent ='';
       customAlert.style.background= 'white'
       customAlert.style = 'z=-1'
@@ -85,14 +88,18 @@ callButtons.forEach((btn)=>{
        customAlert.style.background= 'black'
        customAlert.appendChild(div)
        customAlert.style.display = 'block';
+       document.getElementById("effect").style.display = 'block';
        const alertOkBtn = document.getElementById("alertOK-btn");
        alertOkBtn.addEventListener("click",function(){
         customAlert.textContent ='';
       customAlert.style.background= 'white'
       customAlert.style = 'z=-1'
+      document.getElementById("effect").style.display = 'none';
        })
+      //  document.getElementById("effect").style.display = 'none';
       return;
      }
+     document.getElementById("effect").style.display = 'block';
      const organizationName = btn.parentElement.parentElement.children[0]
      const organizationNumber = btn.parentElement.parentElement.children[2]
      const divAlert = document.createElement("div");
@@ -129,7 +136,7 @@ callButtons.forEach((btn)=>{
       customAlert.textContent ='';
       customAlert.style.background= 'white'
       customAlert.style = 'z=-1'
-      
+      document.getElementById("effect").style.display = 'none';
       currentCoin.innerText = parseInt(currentCoin.innerText)-20;
       const div = document.createElement("div");
       const date = new Date().toLocaleTimeString();
