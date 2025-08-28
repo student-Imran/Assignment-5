@@ -4,7 +4,7 @@ const callButtons = document.querySelectorAll("#call-btn");
 const customAlert = document.getElementById("customAlert");
 const currentCoin =  document.getElementById("current-coin")
 const currentCopy = document.getElementById("current-copy")
-const clearHistory = document.getElementById("clear")
+const clearHistory = document.getElementById("clear-btn")
 const copyButtons = document.querySelectorAll("#copy-btn")
 clearHistory.addEventListener("click",function(){
   document.getElementById("addDiv").innerHTML = '';
@@ -106,7 +106,7 @@ callButtons.forEach((btn)=>{
           </div>
           <div class="calling flex gap-3">
              <h2>Calling ${organizationName.innerHTML}</h2>
-             <p>${organizationNumber.innerHTML}</p>
+             <p>${organizationNumber.innerHTML}...</p>
           </div>
         </div><br>
         <div class="div-3 flex justify-between">

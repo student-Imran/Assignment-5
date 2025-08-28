@@ -11,14 +11,14 @@
     
 </head>
 <body class="bg-[#f5fff6]">
-    <nav class="flex justify-between p-9  h-28 bg-white">
-        <div class="nav-left w-1/2 ">
+    <nav class="flex justify-between flex-col md:flex-row p-9  md:h-28 bg-white">
+        <div class="nav-left mx-auto md:mx-0 md:w-1/2">
           <div class="flex gap-2">
              <figure><img class="h-12" src="./assets/logo.png" alt=""></figure>
              <p class="text-[#006747] font-bold">Emergency <br> Service</p>
           </div>
         </div>
-        <div class="nav-right flex gap-4 ">
+        <div class="nav-right flex gap-4 mx-auto md:mx-0 mt-5 md:mt-0">
            <button class="flex justify-center items-center gap-2 w-[90px] h-10  rounded-xl bg-[#41ff6b1a]">
             <div class="btn-left">
                 <p id="current-heart">0</p>
@@ -42,7 +42,7 @@
     </nav>
 
     <!-- Banner Section  -->
-     <div class="banner flex justify-center text-center  w-full bg-[linear-gradient(90deg,rgba(1,49,35,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)]">
+     <div class="banner flex justify-center text-center  w-full bg-[linear-gradient(90deg,rgba(1,49,35,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] md:mt-0">
         <div class="banner-description">
             <figure><img class="w-20 h-24 mx-auto pt-3" src="./assets/logo-dark.png" alt=""></figure><br>
             <h2 class="text-white text-4xl">Emergency Service Directory</h2> <br>
@@ -53,10 +53,10 @@
 
      <!-- Card Container  -->
 
-     <div class="container w-11/12 h-[1000px] grid grid-cols-12 mx-auto mt-14">
-       <div class="left col-span-9 ">
-           <div class="card-container grid grid-cols-3 gap-5">
-            <div class="card w-80 h-72  p-5 shadow-md bg-white">
+     <div class="container mt-5 md:h-[1000px] grid grid-cols-1 md:grid md:grid-cols-12 md:w-11/12 md:mx-auto md:mt-14">
+       <div class="left  md:col-span-9 ">
+           <div class="card-container grid grid-cols-1 md:grid md:grid-cols-3 md:gap-5">
+            <div class="card p-5 my-5 md:my-0 mx-auto w-[300px] md:col-span-1 md:w-80 md:h-72 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/emergency.png" alt=""></figure>
                 <i id="click-heart" class="fa-regular fa-heart" style="color: #000000;"></i>
@@ -81,7 +81,7 @@
                 </div>
             </div>
           </div>
-          <div class="card w-80 h-72  p-5 shadow-md bg-white">
+          <div class="card p-5 my-5 md:my-0 mx-auto w-[300px] md:col-span-1 md:w-80 md:h-72 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/police.png" alt=""></figure>
                 <i  class="fa-regular fa-heart" style="color: #000000;"></i>
@@ -106,7 +106,7 @@
                 </div>
             </div>
           </div>
-          <div class="card w-80 h-72  p-5 shadow-md bg-white">
+          <div class="card my-5 md:my-0 p-5 mx-auto w-[300px] md:col-span-1 md:w-80 md:h-72 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/fire-service.png" alt=""></figure>
                 <i class="fa-regular fa-heart" style="color: #000000;"></i>
@@ -131,7 +131,7 @@
                 </div>
             </div>
           </div>
-          <div class="card w-80 h-72  p-5 shadow-md bg-white">
+          <div class="card my-5 md:my-0 p-5 mx-auto w-[300px] md:col-span-1 md:w-80 md:h-72 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/ambulance.png" alt=""></figure>
                 <i class="fa-regular fa-heart" style="color: #000000;"></i>
@@ -156,7 +156,7 @@
                 </div>
             </div>
           </div>
-          <div class="card w-80 h-72  p-5 shadow-md bg-white">
+          <div class="card my-5 md:my-0 p-5 mx-auto w-[300px] md:col-span-1 md:w-80 md:h-72 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/emergency.png" alt=""></figure>
                 <i class="fa-regular fa-heart" style="color: #000000;"></i>
@@ -181,7 +181,7 @@
                 </div>
             </div>
           </div>
-          <div class="card w-80 h-72  p-5 shadow-md bg-white">
+          <div class="card my-5 md:my-0 p-5 mx-auto w-[300px] md:col-span-1 md:w-80 md:h-72 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/emergency.png" alt=""></figure>
                 <i class="fa-regular fa-heart" style="color: #000000;"></i>
@@ -206,7 +206,7 @@
                 </div>
             </div>
           </div>
-          <div class="card w-80 h-72  p-5 shadow-md bg-white">
+          <div class="card my-5 md:my-0 p-5 mx-auto w-[300px] md:col-span-1 md:w-80 md:h-72 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/emergency.png" alt=""></figure>
                 <i class="fa-regular fa-heart" style="color: #000000;"></i>
@@ -216,7 +216,7 @@
                 <h2 id="organization-name" class="font-bold">Electricity Helpline</h2>
                 <p class="text-[#5C5C5C]">Electricity Outage</p>
                 <p id="organization-number" class="font-bold text-2xl mt-2">16216</p>
-                <div class="rounded-xl w-13 h-7 bg-[var(--Gray-Light,rgba(242,242,242,1))] flex justify-center items-center mt-2 ">
+                <div class="rounded-xl w-20 h-7 bg-[var(--Gray-Light,rgba(242,242,242,1))] flex justify-center items-center mt-2 ">
                     <p class=" p-3">Electricity</p>
                 </div>
                 <div class="div-btn flex justify-between gap-2 mt-4">
@@ -231,7 +231,7 @@
                 </div>
             </div>
           </div>
-          <div class="card w-80 h-72  p-5 shadow-md bg-white">
+          <div class="card my-5 md:my-0 p-5 mx-auto w-[300px] md:col-span-1 md:w-80 md:h-72 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/brac.png" alt=""></figure>
                 <i class="fa-regular fa-heart" style="color: #000000;"></i>
@@ -256,7 +256,7 @@
                 </div>
             </div>
           </div>
-          <div class="card w-80 h-72  p-5 shadow-md bg-white">
+          <div class="card my-5 md:my-0 p-5 mx-auto w-[300px] md:col-span-1 md:w-80 md:h-72 shadow-md bg-white">
             <div class="flex justify-between items-center">
                 <figure class="w-12 h-12 rounded-xl bg-[#ffe3e2]"><img class="w-8 h-8" src="./assets/Bangladesh-Railway.png" alt=""></figure>
                 <i class="fa-regular fa-heart" style="color: #000000;"></i>
@@ -285,14 +285,14 @@
           
           
        </div>
-       <aside class="bg-white rounded-md h-[900px] col-span-3 shadow-md p-5">
+       <aside class="bg-white w-full md:ml-4 rounded-md mx-auto md:mx-0  h-[700px] md:h-[900px] md:col-span-3 shadow-md p-5">
            <div class="history-heading flex justify-between">
             <div class="left-div flex items-center  gap-3 justify-between">
                <i class="fa-regular fa-clock mt-1" style="color: #abadb0;"></i>
                <p class="font-bold text-[20px]">Call History</p>
             </div>
-            <button class="flex justify-center items-center gap-2 w-[90px] h-10  rounded-xl bg-[#00a63e]">
-            <p id="clear" class="text-white">Clear</p>
+            <button id="clear-btn" class="flex justify-center items-center gap-2 w-[90px] h-10  rounded-xl bg-[#00a63e]">
+            <p class="text-white">Clear</p>
            </button>
            </div><br>
            <div id="addDiv">
@@ -303,7 +303,7 @@
        </aside>
      </div>
 
-      <div id="customAlert" class="hidden fixed top-0 left-[38%] text-white bg-black w-[400px] rounded-xl z-50 p-3">
+      <div id="customAlert" class="hidden fixed top-0 left-10 md:left-[38%] text-white bg-black md:w-[400px] rounded-b-xl z-10 p-3">
         
        </div>
      <script src="./script.js"></script>
