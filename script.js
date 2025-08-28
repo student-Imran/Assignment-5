@@ -2,10 +2,46 @@
 
 const callButtons = document.querySelectorAll("#call-btn");
 const customAlert = document.getElementById("customAlert");
+const currentCoin =  document.getElementById("current-coin")
 
 
 callButtons.forEach((btn)=>{
   btn.addEventListener("click",function(){
+     if(parseInt(currentCoin.innerText)<20){
+       const div = document.createElement("div");
+       div.innerHTML = `
+       <div class="div-1">
+           <p>emergency-service.netify.app says</p>
+        </div><br>
+         <div class="div-2 flex gap-3">
+          <div class="icon-div">
+          <i class="fa-solid fa-xmark" style="color: #fe0101;"></i>
+          </div>
+          <div class="calling flex gap-3">
+             <p>You don't have sufficient coins , at least 20 coins needed for call</p>
+          </div>
+        </div><br>
+        <div class="div-3 flex justify-between">
+          <div>
+
+          </div>
+          <div>
+            <button id="alertOK-btn" class="bg-pink-300 text-black w-16 h-10 rounded-xl">OK</button>
+          </div>
+        </div>
+
+       `
+       customAlert.style.background= 'black'
+       customAlert.appendChild(div)
+       customAlert.style.display = 'block';
+       const alertOkBtn = document.getElementById("alertOK-btn");
+       alertOkBtn.addEventListener("click",function(){
+        customAlert.textContent ='';
+      customAlert.style.background= 'white'
+      customAlert.style = 'z=-1'
+       })
+      return;
+     }
      const organizationName = btn.parentElement.parentElement.children[0]
      const organizationNumber = btn.parentElement.parentElement.children[2]
      const divAlert = document.createElement("div");
@@ -42,7 +78,7 @@ callButtons.forEach((btn)=>{
       customAlert.textContent ='';
       customAlert.style.background= 'white'
       customAlert.style = 'z=-1'
-      const currentCoin =  document.getElementById("current-coin")
+      
       currentCoin.innerText = parseInt(currentCoin.innerText)-20;
       const div = document.createElement("div");
       const date = new Date().toLocaleTimeString();
