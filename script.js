@@ -3,7 +3,10 @@
 const callButtons = document.querySelectorAll("#call-btn");
 const customAlert = document.getElementById("customAlert");
 const currentCoin =  document.getElementById("current-coin")
-
+const clearHistory = document.getElementById("clear")
+clearHistory.addEventListener("click",function(){
+  document.getElementById("addDiv").innerHTML = '';
+})
 
 callButtons.forEach((btn)=>{
   btn.addEventListener("click",function(){
