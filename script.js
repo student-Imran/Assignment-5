@@ -3,9 +3,57 @@
 const callButtons = document.querySelectorAll("#call-btn");
 const customAlert = document.getElementById("customAlert");
 const currentCoin =  document.getElementById("current-coin")
+const currentCopy = document.getElementById("current-copy")
 const clearHistory = document.getElementById("clear")
+const copyButtons = document.querySelectorAll("#copy-btn")
 clearHistory.addEventListener("click",function(){
   document.getElementById("addDiv").innerHTML = '';
+})
+
+copyButtons.forEach((copyBtn)=>{
+   copyBtn.addEventListener("click",function(){
+
+     const organizationNumber = copyBtn.parentElement.parentElement.children[2]
+     const copyText = organizationNumber.innerText;
+     navigator.clipboard.writeText(copyText);
+     
+     
+     const divAlert = document.createElement("div");
+     divAlert.innerHTML = `
+      <div class="div-1">
+           <p>emergency-service.netify.app says</p>
+        </div><br>
+        <div class="div-2">
+          <div class="calling flex gap-3">
+              <p>Number has been copied</p>
+             <p>${organizationNumber.innerHTML}</p>
+          </div>
+        </div><br>
+        <div class="div-3 flex justify-between">
+          <div>
+
+          </div>
+          <div>
+            <button id="alertOK-btn" class="bg-pink-300 text-black w-16 h-10 rounded-xl">OK</button>
+          </div>
+        </div>
+     `
+     customAlert.style.background= 'black'
+
+     customAlert.appendChild(divAlert)
+     customAlert.style.display = 'block';
+     const alertOkBtn = document.getElementById("alertOK-btn");
+     
+     alertOkBtn.addEventListener("click",function(){
+      customAlert.textContent ='';
+      customAlert.style.background= 'white'
+      customAlert.style = 'z=-1'
+      currentCopy.innerText = parseInt(currentCopy.innerText)+1;
+
+
+     })
+
+   })
 })
 
 callButtons.forEach((btn)=>{
