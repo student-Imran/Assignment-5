@@ -11,7 +11,7 @@
 3 . What is Event Bubbling and how does it work?  
    -> A mechanism  in the DOM tree where an event on a child element, when triggered, will "bubble up" and also trigger the same event on all of its parent elements.  
 4 . What is Event Delegation in JavaScript? Why is it useful?  
-   -> A pattern of handling events where I am attach a single event listener to a parent element instead of to each individual child.  
+   -> A pattern of handling events where I attach a single event listener to a parent element instead of to each individual child.  
 5 . What is the difference between preventDefault() and stopPropagation() methods?  
    -> preventDefault() : stops the default browser action for an event.  
    -> stopPropagation() : prevents the event from bubbling up to parent elements.  
