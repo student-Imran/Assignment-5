@@ -1,6 +1,40 @@
+// ADD Cursor : pointer to all button
 
+const allButtons = document.querySelectorAll('button');
+allButtons.forEach(button => {
+    button.style.cursor = 'pointer';
+});
 
-// DOM of History and Coin
+// ADD hover effect to all button
+
+const style = document.createElement("style")
+ 
+style.textContent = `
+#clear-btn{
+  transition: all 0.3s ease;
+}
+#copy-btn{
+  transition: all 0.3s ease;
+}
+#call-btn{
+  transition: all 0.3s ease;
+}
+#call-btn:hover{
+   box-shadow:0 4px 8px rgba(0,0,0,0.5);
+   opacity:0.9
+ }
+   #copy-btn:hover{
+   box-shadow:0 4px 8px rgba(0,0,0,0.5);
+   opacity:0.9
+ }
+   #clear-btn:hover{
+   box-shadow:0 4px 8px rgba(0,0,0,0.5);
+   opacity:0.9
+ }
+`
+document.head.appendChild(style);
+
+// DOM of History , Copy button , Call button , Clear button , Heart
 
 const callButtons = document.querySelectorAll("#call-btn");
 const customAlert = document.getElementById("customAlert");
@@ -8,9 +42,14 @@ const currentCoin =  document.getElementById("current-coin")
 const currentCopy = document.getElementById("current-copy")
 const clearHistory = document.getElementById("clear-btn")
 const copyButtons = document.querySelectorAll("#copy-btn")
+
+// Clear History
+
 clearHistory.addEventListener("click",function(){
   document.getElementById("addDiv").innerHTML = '';
 })
+
+// Copy 
 
 copyButtons.forEach((copyBtn)=>{
    copyBtn.addEventListener("click",function(){
@@ -58,6 +97,10 @@ copyButtons.forEach((copyBtn)=>{
 
    })
 })
+
+
+// Copy
+
 
 callButtons.forEach((btn)=>{
   btn.addEventListener("click",function(){
@@ -166,7 +209,7 @@ callButtons.forEach((btn)=>{
   })
 })
 
-//  DOM of Heart 
+//  Heart 
 
 const hearts = document.querySelectorAll(".fa-heart")
 
