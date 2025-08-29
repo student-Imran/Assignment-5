@@ -1,3 +1,5 @@
+#Assignment - 5
+
 1 . What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
    -> getElementById : Select the item with this specific id . Ex : getElementById(copy-btn)
    -> getEleentByClassName : Select multiple item with the class name and return HTML collection . 
